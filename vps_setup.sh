@@ -20,6 +20,9 @@ mysql -u root -p
 # GRANT ALL PRIVILEGES ON * . * TO 'rails'@'localhost';
 # FLUSH PRIVILEGES;
 
+# Node.js
+add-apt-repository ppa:chris-lea/node.js && apt-get -y update && apt-get -y install nodejs
+
 # add user
 adduser olivierdo
 /usr/sbin/visudo
