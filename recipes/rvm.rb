@@ -16,3 +16,24 @@ before 'deploy:setup', 'rvm:install_ruby' # install Ruby and create gemset, OR:
 #require "rvm/capistrano/alias_and_wrapp"
 #before 'deploy:setup', 'rvm:create_alias'
 #before 'deploy:setup', 'rvm:create_wrappers'
+
+
+
+
+
+
+
+#The problem may be that you need to create the bundler wrapper. You can do that this way(in your deploy.rb, for example)
+
+#require "rvm/capistrano" # http://beginrescueend.com/integration/capistrano/
+
+# rvm-capistrano settings
+#set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
+
+#namespace :rvm do
+#  task :create_bundle_wrapper, roles: :app do
+#    run "rvm wrapper #{rvm_ruby_string} bundle bundle"
+#  end  
+#end
+#
+#after "deploy:create_symlink", "rvm:create_bundle_wrapper"

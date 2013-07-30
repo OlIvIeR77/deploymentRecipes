@@ -31,3 +31,8 @@ adduser olivierdo
 su olivierdo
 sudo usermod -a -G rvm olivierdo if install rvm :system
 cat ~/.ssh/id_rsa.pub | ssh olivierdo@185.14.184.133 'cat >> ~/.ssh/authorized_keys'
+
+
+
+gem install bundler (logged as olivierdo)
+gem install rake
