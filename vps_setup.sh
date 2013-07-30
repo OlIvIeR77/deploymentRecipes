@@ -36,3 +36,13 @@ cat ~/.ssh/id_rsa.pub | ssh olivierdo@185.14.184.133 'cat >> ~/.ssh/authorized_k
 
 gem install bundler (logged as olivierdo)
 gem install rake
+
+# Image Magick
+sudo apt-get install -y imagemagick
+sudo apt-get install -y libmagickcore-dev
+sudo apt-get install libmagickwand-dev
+sudo apt-get install graphicsmagick-libmagick-dev-compat 
+sudo apt-get install libmagickwand-dev
+
+
+
