@@ -1,12 +1,24 @@
 #!/bin/bash
 
 apt-get -y update && apt-get -y upgrade && apt-get -y install curl && apt-get -y install git-core && apt-get -y install python-software-properties && apt-get -y install locate
-
 #apt-get -y update && apt-get -y upgrade 
 #apt-get -y install curl 
 #apt-get -y install git-core  
 #apt-get -y install python-software-properties
 #apt-get -y install locate
+
+# rvm & ruby
+\curl -L https://get.rvm.io | bash
+source /etc/profile.d/rvm.sh
+rvm requirements
+rvm install 1.9.3
+
+# nginx
+add-apt-repository ppa:nginx/stable && apt-get -y update && apt-get -y install nginx && service nginx start
+#add-apt-repository ppa:nginx/stable
+#apt-get -y update
+#apt-get -y install nginx
+#service nginx start
 
 # add user
 adduser olivierdo
@@ -17,19 +29,14 @@ su olivierdo
 sudo usermod -a -G rvm olivierdo if install rvm :system
 cat ~/.ssh/id_rsa.pub | ssh olivierdo@185.14.184.133 'cat >> ~/.ssh/authorized_keys'
 
-# nginx
-add-apt-repository ppa:nginx/stable
-apt-get -y update
-apt-get -y install nginx
-service nginx start
-
 # mysql
-apt-get install -y mysql-server
-apt-get install -y libmysqlclient-dev
-apt-get install -y mysql-client
+apt-get install -y mysql-server && apt-get install -y libmysqlclient-dev && apt-get install -y mysql-client
+#apt-get install -y mysql-server
+#apt-get install -y libmysqlclient-dev
+#apt-get install -y mysql-client
 sudo mysql_install_db
 sudo /usr/bin/mysql_secure_installation
-mysql -u root -pPASSWORD
+mysql -u root -p PASSWORD
 # CREATE USER 'rails'@'localhost' IDENTIFIED BY 'PASSWORD';
 # GRANT ALL PRIVILEGES ON * . * TO 'rails'@'localhost';
 # FLUSH PRIVILEGES;
@@ -48,15 +55,11 @@ sudo -u postgres psql
 apt-get -y install telnet postfix
 
 # Node.js
-add-apt-repository ppa:chris-lea/node.js
-apt-get -y update
-apt-get -y install nodejs
+add-apt-repository ppa:chris-lea/node.js && apt-get -y update && apt-get -y install nodejs
+#add-apt-repository ppa:chris-lea/node.js
+#apt-get -y update
+#apt-get -y install nodejs
 
-# rvm & ruby
-\curl -L https://get.rvm.io | bash
-source /etc/profile.d/rvm.sh
-rvm requirements
-rvm install 1.9.3
 
 
 
