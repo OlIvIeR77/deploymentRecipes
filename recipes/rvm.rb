@@ -1,5 +1,6 @@
 set :rvm_type, :system
 set :rvm_ruby_string, :local              # use the same ruby as used locally for deployment
+#set :rvm_ruby_string, 'release_path'	  # will load ruby from the deployed code using .rvmrc or other file like .ruby-version
 set :rvm_autolibs_flag, "read-only"       # more info: rvm help autolibs
 #set :rvm_ruby_string, "1.9.3-p392"              # use the same ruby as used locally for deployment
 #set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
