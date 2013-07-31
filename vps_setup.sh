@@ -41,9 +41,9 @@ gem install rake
 # Image Magick
 sudo apt-get install -y imagemagick
 sudo apt-get install -y libmagickcore-dev
-sudo apt-get install libmagickwand-dev
-sudo apt-get install graphicsmagick-libmagick-dev-compat 
-sudo apt-get install libmagickwand-dev
+sudo apt-get install -y libmagickwand-dev
+sudo apt-get install -y graphicsmagick-libmagick-dev-compat 
+sudo apt-get install -y libmagickwand-dev
 
 
 
