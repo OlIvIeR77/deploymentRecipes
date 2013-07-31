@@ -6,7 +6,7 @@ apt-get -y update && apt-get -y upgrade && apt-get -y install curl && apt-get -y
 \curl -L https://get.rvm.io | bash
 source /etc/profile.d/rvm.sh
 rvm requirements
-rvm install 1.9.3
+#rvm install 1.9.3
 
 # nginx
 add-apt-repository ppa:nginx/stable && apt-get -y update && apt-get -y install nginx && service nginx start
@@ -33,9 +33,9 @@ sudo usermod -a -G rvm olivierdoe if install rvm :system
 ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub | ssh olivierdoe@37.139.14.17 'cat >> ~/.ssh/authorized_keys'
 
-
-
-gem install bundler (logged as olivierdo)
+su olivierdoe
+cd ~
+gem install bundler (logged as olivierdoe)
 gem install rake
 
 # Image Magick
