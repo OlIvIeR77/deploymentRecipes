@@ -30,7 +30,7 @@ adduser olivierdo
 #=> olivierdo ALL= NOPASSWD: /etc/init.d/unicorn_deployTest
 su olivierdoe
 sudo usermod -a -G rvm olivierdoe if install rvm :system
-cat ~/.ssh/id_rsa.pub | ssh olivierdo@185.14.184.133 'cat >> ~/.ssh/authorized_keys'
+cat ~/.ssh/id_rsa.pub | ssh olivierdoe@37.139.14.17 'cat >> ~/.ssh/authorized_keys'
 
 
 
