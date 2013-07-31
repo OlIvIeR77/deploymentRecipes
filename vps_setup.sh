@@ -28,8 +28,8 @@ adduser olivierdo
 /usr/sbin/visudo
 #=> add olivierdo to sudoers => olivierdo       ALL=(ALL:ALL) ALL
 #=> olivierdo ALL= NOPASSWD: /etc/init.d/unicorn_deployTest
-su olivierdo
-sudo usermod -a -G rvm olivierdo if install rvm :system
+su olivierdoe
+sudo usermod -a -G rvm olivierdoe if install rvm :system
 cat ~/.ssh/id_rsa.pub | ssh olivierdo@185.14.184.133 'cat >> ~/.ssh/authorized_keys'
 
 
