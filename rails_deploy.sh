@@ -63,6 +63,18 @@ add-apt-repository ppa:chris-lea/node.js && apt-get -y update && apt-get -y inst
 
 
 
+# rbenv
+curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
+vim ~/.bashrc # add rbenv to the top
+. ~/.bashrc
+rbenv bootstrap-ubuntu-10-04
+rbenv install 1.9.3-p125
+rbenv global 1.9.3-p125
+gem install bundler --no-ri --no-rdoc
+rbenv rehash
+
+# get to know github.com
+ssh git@github.com
 
 
 
