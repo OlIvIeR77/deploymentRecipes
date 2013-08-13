@@ -12,7 +12,7 @@ server "blogolivierdo.no-ip.org", :web, :app, :db, primary: true
 
 set :site_url, "blogolivierdo.no-ip.org"
 set :application, "blog"
-set :user, "olivierdo"
+set :user, "deployer"
 
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :use_sudo, false

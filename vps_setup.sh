@@ -31,7 +31,7 @@ adduser deployer
 su deployer
 sudo usermod -a -G rvm deployer if install rvm :system
 ssh-keygen -t rsa
-cat ~/.ssh/id_rsa.pub | ssh deployer@37.139.14.17 'cat >> ~/.ssh/authorized_keys'
+cat ~/.ssh/id_rsa.pub | ssh deployer@37.139.18.119 'cat >> ~/.ssh/authorized_keys'
 
 su deployer
 cd ~
